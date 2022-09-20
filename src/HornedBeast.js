@@ -1,17 +1,21 @@
 import React from 'react';
 
 class HornedBeast extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = { this.props.rating}
+  } 
   render() {
     return (
-      <>
-        <h2>{this.props.title}</h2>
-        <img
-          src={this.props.imageUrl}
-          title={this.props.title}
-          alt="A horned animal"
-        />
-        <p>{this.props.description}</p>
-      </>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={this.props.src} />
+      <Card.Body>
+        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Text>{this.props.description}</Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
     );
   }
 }
