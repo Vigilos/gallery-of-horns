@@ -18,7 +18,6 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      // <div className="bg-light border d-inline-block">
       <div className="bg-light border m-4 card">
         <Card border="secondary" style={{ width: '15rem', height: '22rem' }}>
           <div className="text-center m-2" onClick={this.handleImageClick}>

@@ -23,8 +23,9 @@ A picture gallery of various animals with horns, where you can vote for your fav
    Start time: 16:00
    Finish time: 18:00
    Actual time needed to complete: 2 hours
+
 4. Name of feature: Display a Modal
    Estimate of time needed to complete: 1 hour
    Start time: 14:00
-   Finish time:
-   Actual time needed to complete:
+   Finish time: 15:30
+   Actual time needed to complete: 1.5 hours
