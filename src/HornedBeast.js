@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
@@ -10,22 +9,34 @@ class HornedBeast extends React.Component {
 
   // Handle a click on any card
   handleClick = () => {
-    this.setState({ rating: this.state.rating + '❤' });
+    this.setState({ rating: this.state.rating + '❤️' });
   };
 
   render() {
     return (
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={this.props.imageUrl} />
-        <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
-          <Card.Text>Rating: {this.state.rating}</Card.Text>
-          <Button variant="primary" onClick={this.handleClick}>
-            Vote as Favorite
-          </Button>
-        </Card.Body>
-      </Card>
+      // <div className="bg-light border d-inline-block">
+      <div className="bg-light border m-4 card">
+        <Card
+          border="secondary"
+          style={{ width: '15rem', height: '22rem' }}
+          onClick={this.handleClick}
+        >
+          <div className="text-center m-2">
+            <Card.Img
+              variant="top"
+              src={this.props.imageUrl}
+              className="w-50"
+            />
+          </div>
+          <Card.Body>
+            <div className="text-center">
+              <Card.Title>{this.props.title}</Card.Title>
+            </div>
+            <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text>Rating: {this.state.rating}</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     );
   }
 }
