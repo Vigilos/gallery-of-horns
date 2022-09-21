@@ -1,6 +1,6 @@
 # Gallery of Horns
 
-A picture gallery of various animals with horns.
+A picture gallery of various animals with horns, where you can vote for your favorites.
 
 ---
 
@@ -19,7 +19,7 @@ A picture gallery of various animals with horns.
    Actual time needed to complete: 15 mins
 
 3. Name of feature: Bootstrap
-   Estimate of time needed to complete: 45 hour
-   Start time: 15:15
-   Finish time:
-   Actual time needed to complete:
+   Estimate of time needed to complete: 1 hour
+   Start time: 16:00
+   Finish time: 18:00
+   Actual time needed to complete: 2 hours
