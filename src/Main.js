@@ -12,7 +12,7 @@ class Main extends React.Component {
           Click on an image to see a larger version
         </p>
         <div className="d-flex flex-wrap justify-content-center">
-          {this.props.data.map(animal => {
+          {this.props.animalsToDisplay.map(animal => {
             return (
               <HornedBeast
                 title={animal.title}
