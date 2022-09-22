@@ -28,15 +28,31 @@ class App extends React.Component {
     }
   };
 
-  filterAnimals = searchCriteria => {
-    if (searchCriteria === 0) {
-      this.setState({
-        animalsToDisplay: data,
-      });
+  filterAnimals = (searchCriteria, searchType) => {
+    if (searchType === 'horns') {
+      if (searchCriteria === 0) {
+        this.setState({
+          animalsToDisplay: data,
+        });
+      } else {
+        this.setState({
+          animalsToDisplay: data.filter(v => v.horns === searchCriteria),
+        });
+      }
+    } else if (searchType === 'description') {
+      if (searchCriteria === '') {
+        this.setState({
+          animalsToDisplay: data,
+        });
+      } else {
+        this.setState({
+          animalsToDisplay: data.filter(v =>
+            v.description.toLowerCase().includes(searchCriteria.toLowerCase())
+          ),
+        });
+      }
     } else {
-      this.setState({
-        animalsToDisplay: data.filter(v => v.horns === searchCriteria),
-      });
+      alert('ERROR: Search type not defined (filterAnimals method)!');
     }
   };
 
