@@ -6,6 +6,7 @@ import Main from './Main';
 import Footer from './Footer';
 import data from './assets/data.json';
 import SelectedBeast from './SelectedBeast';
+import SearchForm from './SearchForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       selectedAnimal: {},
+      animalsToDisplay: data,
     };
   }
 
@@ -26,6 +28,18 @@ class App extends React.Component {
     }
   };
 
+  filterAnimals = searchCriteria => {
+    if (searchCriteria === 0) {
+      this.setState({
+        animalsToDisplay: data,
+      });
+    } else {
+      this.setState({
+        animalsToDisplay: data.filter(v => v.horns === searchCriteria),
+      });
+    }
+  };
+
   render() {
     return (
       <>
@@ -33,7 +47,11 @@ class App extends React.Component {
           <Header />
         </header>
         <main>
-          <Main data={data} setShowModal={this.setShowModal} />
+          <SearchForm filterAnimals={this.filterAnimals} />
+          <Main
+            animalsToDisplay={this.state.animalsToDisplay}
+            setShowModal={this.setShowModal}
+          />
         </main>
         <footer>
           <Footer />
