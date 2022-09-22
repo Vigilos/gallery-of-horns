@@ -33,5 +33,5 @@ A picture gallery of various animals with horns, where you can vote for your fav
 5. Name of feature: Filter by Numbers of Horn
    Estimate of time needed to complete: 1 hour
    Start time: 14:30
-   Finish time:
-   Actual time needed to complete:
+   Finish time: 15:05
+   Actual time needed to complete: 35 mins
